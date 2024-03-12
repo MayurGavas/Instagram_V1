@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "3e40ee6e-a353-40fc-b565-c009c825bd2a",
+		"name": "instaclone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33347304"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"guddu3\",\r\n    \"username\": \"Guddu4\",\r\n    \"password\": \"mayur1@123\",\r\n    \"email\": \"mayur1@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/add/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"add",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxMDE1ODA2MywiaWF0IjoxNzEwMDcxNjYzLCJqdGkiOiI3NjRkOTNlZWEyZjk0ODBmYTUyYmIyNmZiMmU0NzZmNCIsInVzZXJfaWQiOjl9.M443vW30xvhZhpeLVqnV1_E_Ts_7iQBpgp2L2C5w45M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMDcxOTYzLCJpYXQiOjE3MTAwNzE2NjMsImp0aSI6IjUwY2U4N2UxODA1NjRjMGFiYzdjNWFhNjE4NzQ0ZGFiIiwidXNlcl9pZCI6OX0.7czpUsdIeKdt--qg0CF9IF-BUOjDyR55rqH5tRepqQ0\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/token/verify/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"token",
+						"verify",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"username\": \"Guddu4\",\r\n    \"password\": \"mayur1@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMDc4OTkxLCJpYXQiOjE3MTAwNzg2OTEsImp0aSI6ImI3ODc5NWRmYmQyZjQ1Y2FiZGQ0OTcwOTg5OTlkODMzIiwidXNlcl9pZCI6OH0.Hn3ueOVv0EMKe41MjttRoDof3pSzsQIAntec1YijdqM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/users/list/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMjAxODg2LCJpYXQiOjE3MTAxMTU0ODYsImp0aSI6ImE5ODA2YTI2NjM3ZDRiZTlhNWJjNWVkNDJlMTg1ZTNiIiwidXNlcl9pZCI6OX0.VWlOze1CZzBV3rp-QGwZ8jvkmaqNgmxnJgjeh1hWZJ4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/users/6/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"6",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMjAxODg2LCJpYXQiOjE3MTAxMTU0ODYsImp0aSI6ImE5ODA2YTI2NjM3ZDRiZTlhNWJjNWVkNDJlMTg1ZTNiIiwidXNlcl9pZCI6OX0.VWlOze1CZzBV3rp-QGwZ8jvkmaqNgmxnJgjeh1hWZJ4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Mayur",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Gavas",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "Hi its my name updated",
+							"type": "text"
+						},
+						{
+							"key": "profile_pic_url",
+							"type": "file",
+							"src": "/C:/Users/mayur/Downloads/Cute-Baby-Naruto-Autumn-_-Fall-4K-Wallpaper.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/update/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile PIC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/profile_pic/Cute-Baby-Naruto-Autumn-_-Fall-4K-Wallpaper.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"profile_pic",
+						"Cute-Baby-Naruto-Autumn-_-Fall-4K-Wallpaper.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
